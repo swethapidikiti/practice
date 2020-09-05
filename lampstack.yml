@@ -1,0 +1,19 @@
+- name: Deploying Lamp stack using Ansible
+  hosts: webservers
+  remote_user: root
+  become: yes
+
+  tasks:
+   - name: Installing the apache server
+     yum: name=httpd state=latest
+
+   - name: Installing Mysql DB server
+     yum:
+      name:
+       - mysql
+       - mysql-server
+       - php
+       - php-mysql
+      state: present
+   - name: Start MYSQL DB Service
+     service: name=mysql state=started
