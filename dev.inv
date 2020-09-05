@@ -1,2 +1,2 @@
-[remote]    
+[webservers]    
 13.232.143.54  ansible_ssh_user=root ansible_ssh_pass=swetha
