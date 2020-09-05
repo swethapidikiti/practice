@@ -17,3 +17,7 @@
       state: present
    - name: Start MYSQL DB Service
      service: name=mysql state=started
+   - name: Deploy Static Website
+     copy:
+       src: index.html
+       dest: /var/www/html
