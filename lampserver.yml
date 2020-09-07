@@ -5,15 +5,14 @@
   tasks:
    - name: Installing Apache Server
      yum: name=httpd state=latest
-   - name : Installing MYSQL DB server & PHP
+   - name : Installing Maria DB server & PHP
      yum:
       name:
-       - mysql
-       - mysql-server
+       - mariadb-server
        - php
        - php-mysql
       state: present
    - name: Start Apache Service
      service: name=httpd state=started
    - name: Start MYSQL Service
-     service: name=mysql state=started
+     service: name=mariadb state=started
