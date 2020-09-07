@@ -1,7 +1,7 @@
 - name: Deploying Lamp Server using Ansible
   hosts: webservers
   remote_user: root
-  become:yes
+  become: yes
   tasks:
    - name: Installing Apache Server
      yum: name=httpd state=latest
